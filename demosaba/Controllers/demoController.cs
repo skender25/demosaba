@@ -27,6 +27,36 @@ namespace demosaba.Controllers
             List<MVClass> lc = new List<MVClass>();
             foreach(DataRow dr in ds.Tables[0].Rows)
             {
+                var con_err = Convert.ToString(dr["CONTIENE_ERRORES"]);
+                var con_errws = Convert.ToString(dr["ERROR_WS"]);
+                var con_soft = Convert.ToString(dr["ERROR_SOFTLAND"]);
+                var acept = Convert.ToString(dr["ACEPTADO"]);
+                var envia = Convert.ToString(dr["ENVIADO"]);
+                var error = true;
+                var error2 = true;
+                var error3 = true;
+                var var_env = false;
+                var var_acep = false;
+                if (con_err == "N")
+                {
+                    error = false;
+                }
+                if (con_errws == "N")
+                {
+                    error2 = false;
+                }
+                if (con_soft == "N")
+                {
+                    error3 = false;
+                }
+                if (envia == "S")
+                {
+                    var_env = true;
+                }
+                if (acept == "A")
+                {
+                    var_acep = true;
+                }
                 lc.Add(new MVClass
                 {
                     DOCUMENTO = Convert.ToString(dr["DOCUMENTO"]),
@@ -41,17 +71,19 @@ namespace demosaba.Controllers
                     TOTALDESCUENTOS = Convert.ToString(dr["TOTALDESCUENTOS"]),
                     TOTALIMPUESTO = Convert.ToString(dr["TOTALIMPUESTO"]),
                     TOTALCOMPROBANTE = Convert.ToString(dr["TOTALCOMPROBANTE"]),
-                    CONTIENE_ERRORES = Convert.ToString(dr["CONTIENE_ERRORES"]),
-                    ERROR_WS = Convert.ToString(dr["ERROR_WS"]),
-                    ERROR_SOFTLAND = Convert.ToString(dr["ERROR_SOFTLAND"]),
-                    ENVIADO = Convert.ToString(dr["ENVIADO"]),
-                    ACEPTADO = Convert.ToString(dr["ACEPTADO"]),
+                    CONTIENE_ERRORES = error,
+                    ERROR_WS = error2,
+                    ERROR_SOFTLAND = error3,
+                    ENVIADO = var_env,
+                    ACEPTADO = var_acep,
                     RESPUESTA_XML = Convert.ToString(dr["RESPUESTA_XML"]),
                     PDF = Convert.ToString(dr["PDF"]),
-                    XML = Convert.ToString(dr["XML"])
+                    XML = Convert.ToString(dr["XML"]),
+                    var = "/pdd/prueba.pdf"
 
 
-                });
+                }); ;
+
             }
 
             sqlconn.Close();
@@ -74,6 +106,36 @@ namespace demosaba.Controllers
             List<MVClass> lc = new List<MVClass>();
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
+                var con_err = Convert.ToString(dr["CONTIENE_ERRORES"]);
+                var con_errws = Convert.ToString(dr["ERROR_WS"]);
+                var con_soft = Convert.ToString(dr["ERROR_SOFTLAND"]);
+                var acept = Convert.ToString(dr["ACEPTADO"]);
+                var envia = Convert.ToString(dr["ENVIADO"]);
+                var error = true;
+                var error2 = true;
+                var error3 = true;
+                var var_env = false;
+                var var_acep = false;
+                if (con_err == "N")
+                {
+                    error = false;
+                }
+                if (con_errws == "N")
+                {
+                    error2 = false;
+                }
+                if (con_soft == "N")
+                {
+                    error3 = false;
+                }
+                if (envia == "S")
+                {
+                    var_env = true;
+                }
+                if (acept == "A")
+                {
+                    var_acep = true;
+                }
                 lc.Add(new MVClass
                 {
 
@@ -89,16 +151,17 @@ namespace demosaba.Controllers
                     TOTALDESCUENTOS = Convert.ToString(dr["TOTALDESCUENTOS"]),
                     TOTALIMPUESTO = Convert.ToString(dr["TOTALIMPUESTO"]),
                     TOTALCOMPROBANTE = Convert.ToString(dr["TOTALCOMPROBANTE"]),
-                    CONTIENE_ERRORES = Convert.ToString(dr["CONTIENE_ERRORES"]),
-                    ERROR_WS = Convert.ToString(dr["ERROR_WS"]),
-                    ERROR_SOFTLAND = Convert.ToString(dr["ERROR_SOFTLAND"]),
-                    ENVIADO = Convert.ToString(dr["ENVIADO"]),
-                    ACEPTADO = Convert.ToString(dr["ACEPTADO"]),
+                    CONTIENE_ERRORES = error,
+                    ERROR_WS = error2,
+                    ERROR_SOFTLAND = error3,
+                    ENVIADO = var_env,
+                    ACEPTADO = var_acep,
                     RESPUESTA_XML = Convert.ToString(dr["RESPUESTA_XML"]),
                     PDF = Convert.ToString(dr["PDF"]),
-                    XML = Convert.ToString(dr["XML"])
-
+                    XML = Convert.ToString(dr["XML"]),
+                    var = "/pdd/pp.XML"
                 });
+                
             }
 
             sqlconn.Close();

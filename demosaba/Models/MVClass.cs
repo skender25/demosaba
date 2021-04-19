@@ -28,20 +28,23 @@ namespace demosaba.Models
 
         public string TOTALCOMPROBANTE { get; set; }
 
-        public string CONTIENE_ERRORES { get; set; }
+        public bool CONTIENE_ERRORES { get; set; }
 
-        public string ERROR_WS { get; set; }
+        public bool ERROR_WS { get; set; }
 
-        public string ERROR_SOFTLAND { get; set; }
+        public bool ERROR_SOFTLAND { get; set; }
 
-        public string ENVIADO { get; set; }
+        public bool ENVIADO { get; set; }
 
-        public string ACEPTADO { get; set; }
+        public bool ACEPTADO { get; set; }
 
         public string RESPUESTA_XML { get; set; }
         public string PDF { get; set; }
 
         public string XML { get; set; }
+
+        public string var { get; set; }
+
 
     }
 }

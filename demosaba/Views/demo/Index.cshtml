@@ -17,161 +17,169 @@
         }
     </p>
     <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DOCUMENTO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CLIENTE)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FECHA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NOMBRE)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NIT_RECEPTOR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CLAVE)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CODIGO_MONEDA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TOTALGRAVADO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TOTALEXENTO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TOTALDESCUENTOS)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TOTALIMPUESTO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TOTALCOMPROBANTE)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CONTIENE_ERRORES)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ERROR_WS)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ERROR_SOFTLAND)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ENVIADO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ACEPTADO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RESPUESTA_XML)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PDF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.XML)
-            </th>
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DOCUMENTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CLIENTE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FECHA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NOMBRE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NIT_RECEPTOR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CLAVE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CODIGO_MONEDA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TOTALGRAVADO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TOTALEXENTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TOTALDESCUENTOS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TOTALIMPUESTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TOTALCOMPROBANTE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CONTIENE_ERRORES)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ERROR_WS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ERROR_SOFTLAND)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ENVIADO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ACEPTADO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RESPUESTA_XML)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PDF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.XML)
+                </th>
 
-            <th></th>
-        </tr>
+                <th></th>
+            </tr>
+        </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DOCUMENTO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CLIENTE)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FECHA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NOMBRE)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NIT_RECEPTOR)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CLAVE)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CODIGO_MONEDA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TOTALGRAVADO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TOTALEXENTO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TOTALDESCUENTOS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TOTALIMPUESTO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TOTALCOMPROBANTE)
+                    </td>
+                    <td>
+                        
+                            @Html.DisplayFor(modelItem => item.CONTIENE_ERRORES)
+                        
+                        
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ERROR_WS)
 
-        @foreach (var item in Model)
-        {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DOCUMENTO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CLIENTE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FECHA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NOMBRE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NIT_RECEPTOR)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CLAVE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CODIGO_MONEDA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TOTALGRAVADO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TOTALEXENTO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TOTALDESCUENTOS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TOTALIMPUESTO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TOTALCOMPROBANTE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CONTIENE_ERRORES)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ERROR_WS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ERROR_SOFTLAND)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ENVIADO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ACEPTADO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RESPUESTA_XML)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PDF)
-        </td>
-        <td>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                XML
-            </button>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ERROR_SOFTLAND)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ENVIADO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ACEPTADO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.XML)
+                    </td>
+                    <td>
+                        <a class="btn-danger" href="file://///C:/Users/CGS/Desktop/Nuevo%20documento%20de%20texto%20(2).txt" target="_blank" rel="noopener noreferrer">PDF</a>
+                    </td>
+                    <td>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                           XML
+                        </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?xml version="1.0" encoding="ISO-8859-1" ?>
+                                        <embed  src="@item.var" class="w-800" height="500" width="500" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a class="btn btn-success" href="@item.var" target="_blank">Abrir Nueva pestana</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <embed src="file://10.0.1.11/DATADE/CVET/00100001010000004343Respuesta.XML" class="w-100" />
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </td>
+                    </td>
 
 
-    </tr>
-        }
+                </tr>
+            }
 
     </table>
 </center>
